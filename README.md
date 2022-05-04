@@ -24,15 +24,29 @@ If you just want to check out how Hubs works and make your own modifications con
 Run the following commands:
 
 ```bash
-git clone https://github.com/mozilla/hubs.git
+git clone git@github.com:la53rshark/hubs-metamask-ens.git
 cd hubs
 npm ci
 npm run dev
 ```
+make a file called `.env` that contains the following env vars.
+```
+host=hubs.local
+HOST_IP=hubs.local
+```
 
-Then visit https://localhost:8080 (note: HTTPS is required, you'll need to accept the warning for the self-signed SSL certificate)
+If you want to deploy, run the following
 
-> Note: When running the Hubs client locally, you will still connect to the development versions of our [Janus WebRTC](https://github.com/mozilla/janus-plugin-sfu) and [reticulum](https://github.com/mozilla/reticulum) servers. These servers do not allow being accessed outside of localhost. If you want to host your own Hubs servers, please check out [Hubs Cloud](https://hubs.mozilla.com/docs/hubs-cloud-intro.html).
+```
+npm run login
+```
+
+Follow the instructions for your Hubs Cloud instance details.
+
+```
+npm run deploy
+```
+
 
 ## Documentation
 
